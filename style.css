@@ -161,6 +161,7 @@ footer p { margin: 0; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
 }
 
-.back-top { text-align: center; padding: 1rem 1.5rem 0; margin: 0; }
-.back-top a { color: var(--muted); text-decoration: none; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.back-top { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1.5rem 0; }
+.back-top a { color: var(--muted); text-decoration: none; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.back-top a::after { content: " \2191"; }
 .back-top a:hover { color: var(--accent); }
