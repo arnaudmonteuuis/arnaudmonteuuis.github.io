@@ -171,3 +171,12 @@ footer p { margin: 0; }
 .back-top a { color: var(--muted); text-decoration: none; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; }
 .back-top a::after { content: " \2191"; }
 .back-top a:hover { color: var(--accent); }
+
+/* Section navigation under the hero */
+.section-nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin-top: 1.25rem; }
+.section-nav a { color: var(--ink); text-decoration: none; font-weight: 600; padding: 0.4rem 0.9rem; border: 1px solid var(--line); border-radius: 999px; }
+.section-nav a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Certifications list */
+.certs { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
+.certs li { border-left: 2px solid var(--accent); padding-left: 1rem; font-size: 1.1rem; }
