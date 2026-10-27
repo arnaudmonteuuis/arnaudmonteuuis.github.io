@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV - Arnaud Monteuuis</title>
+  <meta name="description" content="CV of Arnaud Monteuuis, systems and electronics engineer: qualification, validation and radiation effects for safety-critical systems.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cv main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .cv header.cv-head { padding: 3rem 1.5rem 2rem; max-width: 46rem; margin: 0 auto; border-bottom: 1px solid var(--line); }
+    .cv h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin: 0 0 0.4rem; }
+    .cv .role { color: var(--accent); font-weight: 600; margin: 0 0 1rem; }
+    .cv .contact a { margin-right: 1.25rem; white-space: nowrap; }
+    .cv h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin: 2.5rem 0 1rem; }
+    .cv .job { margin-bottom: 1.5rem; }
+    .cv .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; }
+    .cv .job h3 { font-size: 1.05rem; margin: 0; }
+    .cv .job h3 a { color: var(--ink); text-decoration: none; }
+    .cv .job h3 a:hover { color: var(--accent); text-decoration: underline; }
+    .cv .date { color: var(--muted); font-size: 0.92rem; }
+    .cv .place { color: var(--muted); font-size: 0.92rem; margin: 0 0 0.4rem; }
+    .cv ul { margin: 0; padding-left: 1.1rem; }
+    .cv li { margin-bottom: 0.3rem; }
+    .cv .skills p { margin: 0 0 0.5rem; }
+    .cv .back { display: inline-block; margin-top: 2rem; }
+    @media print {
+      .cv header.cv-head, .cv main { padding-top: 1rem; }
+      .cv a { color: var(--ink); }
+    }
+  </style>
+</head>
+<body class="cv">
+  <header class="cv-head">
+    <h1>Arnaud Monteuuis</h1>
+    <p class="role">Systems and Electronics Engineer · Qualification · Radiation Effects</p>
+    <p class="contact">
+      <a href="mailto:your.professional@email.com">Email</a>
+      <a href="https://www.linkedin.com/in/arnaudmonteuuis/">LinkedIn</a>
+      <a href="https://orcid.org/0000-0001-5220-6180">ORCID</a>
+      <a href="https://arnaudmonteuuis.github.io/">Website</a>
+    </p>
+  </header>
+
+  <main>
+    <h2>Profile</h2>
+    <p>Engineer with more than seven years of experience in qualification, validation and troubleshooting of safety-critical systems at CERN, in aerospace and in research laboratories. Strong in radiation effects, traceability and multidisciplinary coordination.</p>
+
+    <h2>Experience</h2>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><a href="https://www.airbus.com/en/products-services/helicopters">Airbus Helicopters</a> · Systems Engineer</h3>
+        <span class="date">Jun 2025 to present</span>
+      </div>
+      <p class="place">Marignane, France</p>
+      <ul>
+        <li>Validation milestone for the H175 helicopter, managing 300+ requirements under ARP4754A and EASA certification.</li>
+        <li>Coordinate technical inputs across teams, keeping requirements and verification evidence consistent.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><a href="https://www.leti-cea.com/cea-tech/leti/english">CEA-Leti</a> · Electronics Engineer</h3>
+        <span class="date">Jan 2023 to Sep 2024</span>
+      </div>
+      <p class="place">Grenoble, France</p>
+      <ul>
+        <li>Led radiation-qualification campaigns on more than 100 MOSFET devices.</li>
+        <li>Built Python analysis workflows and a LabVIEW program for semi-automated wafer measurements.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><a href="https://www.isae-supaero.fr/en/">ISAE-SUPAERO</a> · Electronics Engineer</h3>
+        <span class="date">Dec 2021 to Oct 2022</span>
+      </div>
+      <p class="place">Toulouse, France</p>
+      <ul>
+        <li>Electrical characterisation of CMOS image-sensor circuits at room and cryogenic temperatures.</li>
+        <li>Upgraded test benches and supervised student projects.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><a href="https://home.cern/">CERN</a> · Electronics Engineer</h3>
+        <span class="date">Feb 2018 to Jan 2020</span>
+      </div>
+      <p class="place">Meyrin, Switzerland</p>
+      <ul>
+        <li>Qualified cryogenic power diodes up to 18 kA for HL-LHC machine protection, under irradiation and at 4.2 to 77 K.</li>
+        <li>Built an integrated electrical test system, hardware and LabVIEW software, from scratch.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><a href="https://home.cern/">CERN</a> · Radiation Effects Engineer (internship)</h3>
+        <span class="date">Apr to Aug 2017</span>
+      </div>
+      <p class="place">Meyrin, Switzerland</p>
+      <ul>
+        <li>Compared in-flight single-event latch-up measurements with ground-based estimates.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><a href="https://csum.umontpellier.fr/">CSUM</a> · Radiation Engineer</h3>
+        <span class="date">Jan to Feb 2017</span>
+      </div>
+      <p class="place">Montpellier, France</p>
+      <ul>
+        <li>Designed radiation shielding for the ROBUSTA-3A nanosatellite.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3><a href="https://centrespatialguyanais.cnes.fr/en">CNES</a> · Technical Compliance Engineer (internship)</h3>
+        <span class="date">Apr to Aug 2016</span>
+      </div>
+      <p class="place">Kourou, French Guiana</p>
+      <ul>
+        <li>Technical compliance on Ariane 5 launches; documentation to identify in-flight anomaly origins.</li>
+      </ul>
+    </article>
+
+    <h2>Education</h2>
+    <article class="job">
+      <div class="job-head">
+        <h3><a href="https://maps.app.goo.gl/gWB5RzjarueJXoSy9">University of Montpellier</a></h3>
+        <span class="date">2012 to 2017</span>
+      </div>
+      <ul>
+        <li>M.Sc. in Electronics, Electrical Engineering and Automatics (space systems and radiation effects)</li>
+        <li>B.Sc. in Applied Physics and Engineering</li>
+        <li>Technical degree in Physics Measurements</li>
+      </ul>
+    </article>
+
+    <h2>Publications</h2>
+    <p>Author and co-author of six peer-reviewed publications on radiation effects, machine protection, reliability and qualification of HL-LHC technologies. <a href="https://orcid.org/0000-0001-5220-6180">Full list on ORCID</a>.</p>
+
+    <h2>Skills</h2>
+    <div class="skills">
+      <p><strong>Engineering:</strong> qualification, verification and validation, requirements traceability, risk analysis, root-cause analysis, technical documentation.</p>
+      <p><strong>Programming and analysis:</strong> Python, C, MATLAB, LabVIEW, data acquisition, test automation.</p>
+      <p><strong>Standards and environments:</strong> ARP4754A, EASA certification, cryogenic and radiation environments.</p>
+    </div>
+
+    <h2>Languages and Certifications</h2>
+    <p>French (native), English (C1), German (B1). BIA, low-voltage electrical habilitation, FASTRAD and OMERE, first aid.</p>
+
+    <p><a class="back" href="index.html">← Back to portfolio</a></p>
+  </main>
+</body>
+</html>
