@@ -180,3 +180,9 @@ footer p { margin: 0; }
 /* Certifications list */
 .certs { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
 .certs li { border-left: 2px solid var(--accent); padding-left: 1rem; font-size: 1.1rem; }
+
+/* Profile icons in the footer */
+.social { display: flex; justify-content: center; gap: 1.5rem; padding: 2.5rem 1.5rem 0; }
+.social a { color: var(--muted); width: 28px; height: 28px; display: block; }
+.social a:hover { color: var(--accent); }
+.social svg { width: 100%; height: 100%; display: block; }
