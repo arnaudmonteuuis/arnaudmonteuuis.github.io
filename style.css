@@ -65,6 +65,8 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-
   align-items: flex-start;
   background:
     radial-gradient(60rem 40rem at 85% 20%, rgba(111, 168, 255, 0.18), transparent 60%),
+    linear-gradient(rgba(111, 168, 255, 0.05) 1px, transparent 1px) 0 0 / 40px 40px,
+    linear-gradient(90deg, rgba(111, 168, 255, 0.05) 1px, transparent 1px) 0 0 / 40px 40px,
     var(--bg);
   max-width: 72rem;
   margin: 0 auto;
