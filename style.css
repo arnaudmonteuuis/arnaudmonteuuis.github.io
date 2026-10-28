@@ -192,3 +192,16 @@ footer p { margin: 0; }
 /* Centre the back-to-top link and copyright line */
 .back-top { text-align: center; }
 footer { text-align: center; }
+
+/* CV panel */
+.cv-modal[hidden] { display: none; }
+.cv-modal { position: fixed; inset: 0; z-index: 50; background: rgba(5, 8, 12, 0.85); display: flex; flex-direction: column; padding: 1rem; }
+.cv-modal-bar { max-width: 56rem; width: 100%; margin: 0 auto 0.75rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.cv-modal-bar h2 { margin: 0; color: var(--ink); font-size: 0.9rem; }
+.cv-modal-actions { display: flex; align-items: center; gap: 0.75rem; }
+.cv-modal-actions .cta { margin: 0; padding: 0.55rem 1.1rem; }
+.cv-modal-close { background: transparent; border: 1px solid var(--line); color: var(--ink); width: 2.4rem; height: 2.4rem; border-radius: 50%; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.cv-modal-close:hover { border-color: var(--accent); color: var(--accent); }
+.cv-modal-frame { width: 100%; max-width: 56rem; flex: 1; margin: 0 auto; border: 0; border-radius: 6px; background: #ffffff; }
+body.cv-open { overflow: hidden; }
+@media (max-width: 40rem) { .cv-modal { padding: 0.5rem; } }

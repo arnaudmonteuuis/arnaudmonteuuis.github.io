@@ -27,7 +27,7 @@
     <p class="lede reveal">Qualifying safety-critical systems, from space and particle accelerators to helicopters.</p>
     <nav class="section-nav reveal" aria-label="Page sections">
       <a href="#about">About</a>
-      <a href="#cv">CV</a>
+      <a href="cv.html" data-cv-open>CV</a>
       <a href="#certifications">Certifications</a>
       <a href="#contact">Let's talk</a>
     </nav>
@@ -46,7 +46,7 @@
       <div class="inner">
         <h2 class="reveal">CV</h2>
         <p class="big reveal">Experience from CNES and CSUM to CERN, ISAE-SUPAERO, CEA-Leti and Airbus Helicopters.</p>
-        <p class="reveal"><a class="cta" href="cv.html">Read my CV</a> <a class="cta ghost" href="cv.html?pdf=1">Download CV (PDF)</a></p>
+        <p class="reveal"><a class="cta" href="cv.html" data-cv-open>Read my CV</a> <a class="cta ghost" href="cv.html?pdf=1">Download CV (PDF)</a></p>
       </div>
     </section>
 
@@ -135,6 +135,56 @@
         });
       }, { threshold: 0.2 });
       items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+  <div class="cv-modal" id="cv-modal" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title" hidden>
+    <div class="cv-modal-bar">
+      <h2 id="cv-modal-title">Curriculum vitae</h2>
+      <div class="cv-modal-actions">
+        <button type="button" class="cta" id="cv-modal-download">Download CV (PDF)</button>
+        <button type="button" class="cv-modal-close" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <iframe class="cv-modal-frame" src="cv.html" title="Arnaud Monteuuis CV"></iframe>
+  </div>
+
+  <script>
+    (function () {
+      var modal = document.getElementById('cv-modal');
+      var frame = modal.querySelector('iframe');
+      var closeBtn = modal.querySelector('.cv-modal-close');
+      var dlBtn = document.getElementById('cv-modal-download');
+      var lastFocus = null;
+
+      function open(e) {
+        if (e) e.preventDefault();
+        lastFocus = document.activeElement;
+        modal.hidden = false;
+        document.body.classList.add('cv-open');
+        closeBtn.focus();
+      }
+      function close() {
+        modal.hidden = true;
+        document.body.classList.remove('cv-open');
+        if (lastFocus) lastFocus.focus();
+      }
+      function download() {
+        try {
+          var w = frame.contentWindow;
+          var original = w.document.title;
+          w.document.title = 'arnaud_monteuuis_cv';
+          w.print();
+          setTimeout(function () { w.document.title = original; }, 500);
+        } catch (err) {
+          window.open('cv.html?pdf=1', '_blank');
+        }
+      }
+
+      document.querySelectorAll('[data-cv-open]').forEach(function (a) { a.addEventListener('click', open); });
+      closeBtn.addEventListener('click', close);
+      dlBtn.addEventListener('click', download);
+      modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) close(); });
     })();
   </script>
 </body>
