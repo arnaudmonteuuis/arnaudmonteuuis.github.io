@@ -30,9 +30,14 @@
     .cv li { margin-bottom: 0.25rem; }
     .cv p { color: #2E2E2E; }
     .cv .back { display: inline-block; margin-top: 2rem; }
+    @page { size: A4; margin: 0; }
     @media print {
-      .cv header.cv-head, .cv main { padding-top: 0.5rem; }
+      .cv { background: #ffffff; }
+      .cv header.cv-head { padding: 1.5cm 1.8cm 0.8cm; max-width: none; }
+      .cv main { max-width: none; padding: 0.5cm 1.8cm 1.5cm; }
       .cv .download, .cv .back { display: none; }
+      .cv h2 { break-after: avoid; }
+      .cv .job { break-inside: avoid; }
     }
   </style>
 </head>
@@ -46,7 +51,6 @@
       <a href="https://orcid.org/0000-0001-5220-6180">ORCID</a>
       <a href="https://arnaudmonteuuis.github.io/">Website</a>
     </p>
-    <p><button type="button" class="cta download" id="download-cv">Download CV (PDF)</button></p>
   </header>
 
   <main>
@@ -161,7 +165,6 @@
       <li>Low Voltage Electrical Safety, BRINKS Formation (Oct 2026, expires Nov 2029)</li>
       <li>Aeronautical Initiation Certificate (BIA), French Ministry of National Education (Jun 2015)</li>
       <li>Fastrad &amp; OMERE, TRAD, Tests &amp; Radiations (Jan 2017)</li>
-      <li>Low-voltage electrical habilitation</li>
     </ul>
 
     <p><a class="back" href="index.html">← Back to portfolio</a></p>
