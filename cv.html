@@ -12,8 +12,9 @@
     .cv h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin: 0 0 0.4rem; }
     .cv .role { color: var(--accent); font-weight: 600; margin: 0 0 1rem; }
     .cv .contact a { margin-right: 1.25rem; white-space: nowrap; }
+    .cv .download { display: inline-block; margin-top: 1rem; }
     .cv h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin: 2.5rem 0 1rem; }
-    .cv .job { margin-bottom: 1.5rem; }
+    .cv .job { margin-bottom: 1.25rem; }
     .cv .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; }
     .cv .job h3 { font-size: 1.05rem; margin: 0; }
     .cv .job h3 a { color: var(--ink); text-decoration: none; }
@@ -22,11 +23,11 @@
     .cv .place { color: var(--muted); font-size: 0.92rem; margin: 0 0 0.4rem; }
     .cv ul { margin: 0; padding-left: 1.1rem; }
     .cv li { margin-bottom: 0.3rem; }
-    .cv .skills p { margin: 0 0 0.5rem; }
     .cv .back { display: inline-block; margin-top: 2rem; }
     @media print {
       .cv header.cv-head, .cv main { padding-top: 1rem; }
       .cv a { color: var(--ink); }
+      .cv .download, .cv .back { display: none; }
     }
   </style>
 </head>
@@ -40,11 +41,12 @@
       <a href="https://orcid.org/0000-0001-5220-6180">ORCID</a>
       <a href="https://arnaudmonteuuis.github.io/">Website</a>
     </p>
+    <p><a class="cta download" href="arnaud_monteuuis_cv.pdf">Download PDF</a></p>
   </header>
 
   <main>
     <h2>Profile</h2>
-    <p>Engineer with more than seven years of experience in qualification, validation and troubleshooting of safety-critical systems at CERN, in aerospace and in research laboratories. Strong in radiation effects, traceability and multidisciplinary coordination.</p>
+    <p>Systems and electronics engineer with 7+ years in qualification, validation and troubleshooting of safety-critical systems at CERN, in aerospace and in research labs.</p>
 
     <h2>Experience</h2>
 
@@ -55,8 +57,8 @@
       </div>
       <p class="place">Marignane, France</p>
       <ul>
-        <li>Validation milestone for the H175 helicopter, managing 300+ requirements under ARP4754A and EASA certification.</li>
-        <li>Coordinate technical inputs across teams, keeping requirements and verification evidence consistent.</li>
+        <li>Validated 300+ H175 requirements under ARP4754A and EASA.</li>
+        <li>Coordinate verification evidence across teams.</li>
       </ul>
     </article>
 
@@ -67,8 +69,8 @@
       </div>
       <p class="place">Grenoble, France</p>
       <ul>
-        <li>Led radiation-qualification campaigns on more than 100 MOSFET devices.</li>
-        <li>Built Python analysis workflows and a LabVIEW program for semi-automated wafer measurements.</li>
+        <li>Led radiation qualification of 100+ MOSFET devices.</li>
+        <li>Built Python and LabVIEW test automation.</li>
       </ul>
     </article>
 
@@ -79,8 +81,8 @@
       </div>
       <p class="place">Toulouse, France</p>
       <ul>
-        <li>Electrical characterisation of CMOS image-sensor circuits at room and cryogenic temperatures.</li>
-        <li>Upgraded test benches and supervised student projects.</li>
+        <li>Characterised CMOS image sensors at room and cryogenic temperatures.</li>
+        <li>Upgraded test benches and supervised students.</li>
       </ul>
     </article>
 
@@ -91,8 +93,8 @@
       </div>
       <p class="place">Meyrin, Switzerland</p>
       <ul>
-        <li>Qualified cryogenic power diodes up to 18 kA for HL-LHC machine protection, under irradiation and at 4.2 to 77 K.</li>
-        <li>Built an integrated electrical test system, hardware and LabVIEW software, from scratch.</li>
+        <li>Qualified cryogenic power diodes up to 18 kA for HL-LHC machine protection.</li>
+        <li>Built the integrated LabVIEW test system from scratch.</li>
       </ul>
     </article>
 
@@ -103,7 +105,7 @@
       </div>
       <p class="place">Meyrin, Switzerland</p>
       <ul>
-        <li>Compared in-flight single-event latch-up measurements with ground-based estimates.</li>
+        <li>Compared in-flight single-event latch-up data with ground estimates.</li>
       </ul>
     </article>
 
@@ -114,7 +116,7 @@
       </div>
       <p class="place">Montpellier, France</p>
       <ul>
-        <li>Designed radiation shielding for the ROBUSTA-3A nanosatellite.</li>
+        <li>Designed TID shielding for the ROBUSTA-3A nanosatellite.</li>
       </ul>
     </article>
 
@@ -125,7 +127,7 @@
       </div>
       <p class="place">Kourou, French Guiana</p>
       <ul>
-        <li>Technical compliance on Ariane 5 launches; documentation to identify in-flight anomaly origins.</li>
+        <li>Documented in-flight anomaly origins for Ariane 5 launches.</li>
       </ul>
     </article>
 
@@ -143,17 +145,19 @@
     </article>
 
     <h2>Publications</h2>
-    <p>Author and co-author of six peer-reviewed publications on radiation effects, machine protection, reliability and qualification of HL-LHC technologies. <a href="https://orcid.org/0000-0001-5220-6180">Full list on ORCID</a>.</p>
+    <p>Co-author of six peer-reviewed publications on radiation effects, machine protection and HL-LHC technologies. <a href="https://orcid.org/0000-0001-5220-6180">Full list on ORCID</a>.</p>
 
-    <h2>Skills</h2>
-    <div class="skills">
-      <p><strong>Engineering:</strong> qualification, verification and validation, requirements traceability, risk analysis, root-cause analysis, technical documentation.</p>
-      <p><strong>Programming and analysis:</strong> Python, C, MATLAB, LabVIEW, data acquisition, test automation.</p>
-      <p><strong>Standards and environments:</strong> ARP4754A, EASA certification, cryogenic and radiation environments.</p>
-    </div>
+    <h2>Languages</h2>
+    <p>French (native), English (C1), German (B1).</p>
 
-    <h2>Languages and Certifications</h2>
-    <p>French (native), English (C1), German (B1). BIA, low-voltage electrical habilitation, FASTRAD and OMERE, first aid.</p>
+    <h2>Certifications</h2>
+    <ul>
+      <li>Foundations of Project Management, Google (Oct 2026)</li>
+      <li>Low Voltage Electrical Safety Refresher Training, BRINKS Formation (Oct 2026, expires Nov 2029)</li>
+      <li>Aeronautical Initiation Certificate (BIA), French Ministry of National Education (Jun 2015)</li>
+      <li>Fastrad &amp; OMERE, TRAD, Tests &amp; Radiations (Jan 2017)</li>
+      <li>Low-voltage electrical habilitation</li>
+    </ul>
 
     <p><a class="back" href="index.html">← Back to portfolio</a></p>
   </main>
