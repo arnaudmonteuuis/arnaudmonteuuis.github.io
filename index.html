@@ -46,7 +46,7 @@
       <div class="inner">
         <h2 class="reveal">CV</h2>
         <p class="big reveal">Experience from CNES and CSUM to CERN, ISAE-SUPAERO, CEA-Leti and Airbus Helicopters.</p>
-        <p class="reveal"><a class="cta" href="cv.html" data-cv-open>Read my CV</a> <a class="cta ghost" href="cv.html?pdf=1">Download CV (PDF)</a></p>
+        <p class="reveal"><a class="cta" href="cv.html" data-cv-open>Read my CV</a> <a class="cta ghost" href="assets/pdf/arnaud_monteuuis_cv.pdf" download>Download CV (PDF)</a></p>
       </div>
     </section>
 
@@ -141,7 +141,7 @@
     <div class="cv-modal-bar">
       <h2 id="cv-modal-title">Curriculum vitae</h2>
       <div class="cv-modal-actions">
-        <button type="button" class="cta" id="cv-modal-download">Download CV (PDF)</button>
+        <a class="cta" href="assets/pdf/arnaud_monteuuis_cv.pdf" download>Download CV (PDF)</a>
         <button type="button" class="cv-modal-close" aria-label="Close">&times;</button>
       </div>
     </div>
@@ -153,7 +153,6 @@
       var modal = document.getElementById('cv-modal');
       var frame = modal.querySelector('iframe');
       var closeBtn = modal.querySelector('.cv-modal-close');
-      var dlBtn = document.getElementById('cv-modal-download');
       var lastFocus = null;
 
       function open(e) {
@@ -168,21 +167,8 @@
         document.body.classList.remove('cv-open');
         if (lastFocus) lastFocus.focus();
       }
-      function download() {
-        try {
-          var w = frame.contentWindow;
-          var original = w.document.title;
-          w.document.title = 'arnaud_monteuuis_cv';
-          w.print();
-          setTimeout(function () { w.document.title = original; }, 500);
-        } catch (err) {
-          window.open('cv.html?pdf=1', '_blank');
-        }
-      }
-
       document.querySelectorAll('[data-cv-open]').forEach(function (a) { a.addEventListener('click', open); });
       closeBtn.addEventListener('click', close);
-      dlBtn.addEventListener('click', download);
       modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) close(); });
     })();

@@ -169,18 +169,5 @@
 
     <p><a class="back" href="index.html">← Back to portfolio</a></p>
   </main>
-  <script>
-    (function () {
-      var btn = document.getElementById('download-cv');
-      function saveAsPdf() {
-        var original = document.title;
-        document.title = 'arnaud_monteuuis_cv';
-        window.print();
-        setTimeout(function () { document.title = original; }, 500);
-      }
-      if (btn) btn.addEventListener('click', saveAsPdf);
-      if (new URLSearchParams(window.location.search).has('pdf')) { window.addEventListener('load', saveAsPdf); }
-    })();
-  </script>
 </body>
 </html>
