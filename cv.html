@@ -41,7 +41,7 @@
       <a href="https://orcid.org/0000-0001-5220-6180">ORCID</a>
       <a href="https://arnaudmonteuuis.github.io/">Website</a>
     </p>
-    <p><a class="cta download" href="arnaud_monteuuis_cv.pdf">Download PDF</a></p>
+    <p><button type="button" class="cta download" id="download-cv">Download CV (PDF)</button></p>
   </header>
 
   <main>
@@ -161,5 +161,18 @@
 
     <p><a class="back" href="index.html">← Back to portfolio</a></p>
   </main>
+  <script>
+    (function () {
+      var btn = document.getElementById('download-cv');
+      function saveAsPdf() {
+        var original = document.title;
+        document.title = 'arnaud_monteuuis_cv';
+        window.print();
+        setTimeout(function () { document.title = original; }, 500);
+      }
+      if (btn) btn.addEventListener('click', saveAsPdf);
+      if (new URLSearchParams(window.location.search).has('pdf')) { window.addEventListener('load', saveAsPdf); }
+    })();
+  </script>
 </body>
 </html>
