@@ -62,7 +62,8 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-
 .hero {
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   background:
     radial-gradient(60rem 40rem at 85% 20%, rgba(111, 168, 255, 0.18), transparent 60%),
     linear-gradient(rgba(111, 168, 255, 0.05) 1px, transparent 1px) 0 0 / 40px 40px,
@@ -205,3 +206,7 @@ footer { text-align: center; }
 .cv-modal-frame { width: 100%; max-width: 56rem; flex: 1; margin: 0 auto; border: 0; border-radius: 6px; background: #ffffff; }
 body.cv-open { overflow: hidden; }
 @media (max-width: 40rem) { .cv-modal { padding: 0.5rem; } }
+
+/* Centre the hero content on the page */
+.hero .lede { margin: 0 auto; }
+.hero .section-nav { justify-content: center; }
