@@ -1,9 +1,9 @@
 /* Immersive draft: full-screen sections, large type, dark theme */
 :root {
-  --bg: #1a2230;
+  --bg: #1d3557;
   --ink: #f2f4f7;
   --muted: #9aa6b4;
-  --line: #33415a;
+  --line: #3d5a80;
   --accent: #6fa8ff;
   --accent-dark: #4a86e0;
   --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
