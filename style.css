@@ -210,3 +210,14 @@ body.cv-open { overflow: hidden; }
 /* Centre the hero content on the page */
 .hero .lede { margin: 0 auto; }
 .hero .section-nav { justify-content: center; }
+
+/* Contact form */
+.contact-form { display: grid; gap: 0.5rem; max-width: 36rem; margin: 0 auto 1.5rem; text-align: left; }
+.contact-form label { font-size: 0.9rem; color: var(--muted); }
+.contact-form input, .contact-form textarea {
+  width: 100%; font: inherit; color: var(--ink);
+  background: rgba(255, 255, 255, 0.05); border: 1px solid var(--line); border-radius: 8px; padding: 0.7rem 0.9rem;
+}
+.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.contact-form .cta { justify-self: center; margin-top: 0.5rem; border: 0; cursor: pointer; font: inherit; }
+.contact-form .hp { position: absolute; left: -9999px; }
