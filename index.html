@@ -96,8 +96,18 @@
       <div class="inner">
         <h2 class="reveal">Let's talk</h2>
         <p class="big reveal">Open to Systems, Project and R&amp;D Engineer roles worldwide.</p>
+        <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" required>
+          <label for="cf-email">Your email</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" required>
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+          <button class="cta" type="submit">Send message</button>
+        </form>
         <p class="reveal actions">
-          <a class="cta" href="mailto:arnaud.monteuuis@pm.me">Email me</a>
+          <a class="cta ghost" href="https://www.linkedin.com/in/arnaudmonteuuis/" target="_blank" rel="noopener">LinkedIn</a>
         </p>
       </div>
     </section>
